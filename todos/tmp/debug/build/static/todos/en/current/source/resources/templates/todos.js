@@ -1,1 +1,1 @@
-SC.TEMPLATES["todos"] = SC.Handlebars.compile("<h1>Todos</h1>\n<input id=\"new-todo\" type=\"text\"\n       placeholder=\"What needs to be done?\" >");
+SC.TEMPLATES["todos"] = SC.Handlebars.compile("<h1>Todos</h1>\n{{#view Todos.CreateTodoView}}\n<input id=\"new-todo\" type=\"text\"\n       placeholder=\"What needs to be done?\" />\n{{/view}}\n{{#collection SC.TemplateCollectionView contentBinding=\"Todos.todoListController\"}}\n  {{content.title}}\n{{/collection}}");
