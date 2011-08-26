@@ -1,0 +1,1 @@
+SC.TEMPLATES["todos"] = SC.Handlebars.compile("<h1>Todos</h1>\n<input id=\"new-todo\" type=\"text\"\n       placeholder=\"What needs to be done?\" >");
