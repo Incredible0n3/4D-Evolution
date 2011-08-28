@@ -1,7 +1,10 @@
 <h1>Todos</h1>
 {{#view Todos.CreateTodoView}}
 {{#view Todos.StatsView id="stats"}}
-  {{displayRemaining}} remaining
+  {{#view SC.Button classBinding="isActive" target= "Todos.todoListController" action="clearCompletedTodos"}}
+    Clear Completed Todos
+  {{/view}}
+  {{displayRemaining}} remaining.
 {{/view}}
 <input id="new-todo" type="text"
        placeholder="What needs to be done?" />

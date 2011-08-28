@@ -56,5 +56,9 @@ Todos.todoListController = SC.ArrayController.create({
 
   remaining: function() {
 	return this.filterProperty('isDone', false).get('length');
-  }.property('@each.isDone')
+  }.property('@each.isDone'),
+
+  clearCompletedTodos: function() {
+	this.filterProperty('isDone', true).forEach(this.removeObject, this);
+  }
 });
