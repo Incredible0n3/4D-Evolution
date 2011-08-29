@@ -4,12 +4,29 @@
 // ==========================================================================
 /*globals Todos */
 
-Todos = SC.Application.create();
-
-Todos.Todo = SC.Object.extend({
-  title: null,
-  isDone: false
+Todos = SC.Application.create({
+  store: SC.Store.create().from(SC.Record.fixtures)
 });
+
+Todos.Todo = SC.Record.extend({
+  title: SC.Record.attr(String),
+  isDone: SC.Record.attr(Boolean, { defaultValue: NO })
+});
+
+Todos.Todo.FIXTURES = [
+ 
+    { "guid": "todo-1",
+      "title": "Build my first SproutCore app",
+      "isDone": false },
+ 
+    { "guid": "todo-2",
+      "title": "Build a really awesome SproutCore app",
+      "isDone": false },
+ 
+    { "guid": "todo-3",
+      "title": "Next, the world!",
+      "isDone": false }
+];
 
 Todos.CreateTodoView = SC.TextField.extend({
   insertNewline: function() {
@@ -41,6 +58,9 @@ SC.ready(function() {
     layerId: 'todos',
     templateName: 'todos'
   });
+
+  var todos = Todos.store.find(Todos.Todo);
+  Todos.todoListController.set('content', todos);
 });
 
 Todos.todoListController = SC.ArrayController.create({
@@ -50,8 +70,7 @@ Todos.todoListController = SC.ArrayController.create({
   // Creates a new todo with the passed title, then adds it
   // to the array.
   createTodo: function(title) {
-    var todo = Todos.Todo.create({ title: title });
-    this.pushObject(todo);
+    Todos.store.createRecord(Todos.Todo, { title: title });
   },
 
   remaining: function() {
@@ -59,7 +78,9 @@ Todos.todoListController = SC.ArrayController.create({
   }.property('@each.isDone'),
 
   clearCompletedTodos: function() {
-	this.filterProperty('isDone', true).forEach(this.removeObject, this);
+	this.filterProperty('isDone', true).forEach( function(item) {
+	  item.destroy();
+	});
   },
 
   allAreDone: function(key, value) {
