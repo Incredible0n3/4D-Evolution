@@ -328,3 +328,115 @@ body, html {
   background-color: #F7F7F7;
 }
 
+           /* ==========================================================================
+*  Project:   Todos
+*  Copyright: @2011 4D Evolution, Inc.
+*  ==========================================================================
+*/
+/* Using media queries to override the default styling and target "mobile" devices */
+@media only screen and (max-device-width: 768px) {
+  /* line 9, tmp/chance/Users/DANNO/Desktop/work/4D-Evolution/todos/tmp/debug/staging/static/todos/en/current/resources/stylesheets/todos_mobile_css.scss */
+  body, html {
+    color: #5B5B5B;
+    background-color: #FFF;
+  }
+
+  /* line 14, tmp/chance/Users/DANNO/Desktop/work/4D-Evolution/todos/tmp/debug/staging/static/todos/en/current/resources/stylesheets/todos_mobile_css.scss */
+  #todos {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -o-border-radius: 0;
+    -ms-border-radius: 0;
+    -khtml-border-radius: 0;
+    border-radius: 0;
+    border-style: none;
+    left: 0;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0;
+    top: 0;
+    width: auto;
+    right: 0;
+  }
+  /* line 25, tmp/chance/Users/DANNO/Desktop/work/4D-Evolution/todos/tmp/debug/staging/static/todos/en/current/resources/stylesheets/todos_mobile_css.scss */
+  #todos #stats {
+    font-size: 16px;
+    line-height: 40px;
+    margin: 10px 0;
+    padding: 5px 5px 5px 10px;
+    width: auto;
+  }
+  /* line 32, tmp/chance/Users/DANNO/Desktop/work/4D-Evolution/todos/tmp/debug/staging/static/todos/en/current/resources/stylesheets/todos_mobile_css.scss */
+  #todos #stats .sc-button {
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -o-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -khtml-border-radius: 5px;
+    border-radius: 5px;
+    float: right;
+    font-size: 11px;
+    line-height: 15px;
+    padding: 5px;
+    text-align: center;
+    text-shadow: white 0px -1px 2px;
+    width: 100px;
+  }
+  /* line 44, tmp/chance/Users/DANNO/Desktop/work/4D-Evolution/todos/tmp/debug/staging/static/todos/en/current/resources/stylesheets/todos_mobile_css.scss */
+  #todos .sc-checkbox {
+    font-size: 16px;
+    margin-left: 10px;
+  }
+  /* line 48, tmp/chance/Users/DANNO/Desktop/work/4D-Evolution/todos/tmp/debug/staging/static/todos/en/current/resources/stylesheets/todos_mobile_css.scss */
+  #todos .sc-checkbox input[type='checkbox'] {
+    position: relative;
+    top: 5px;
+  }
+  /* line 54, tmp/chance/Users/DANNO/Desktop/work/4D-Evolution/todos/tmp/debug/staging/static/todos/en/current/resources/stylesheets/todos_mobile_css.scss */
+  #todos input[type='text'] {
+    display: block;
+    font-size: 24px;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    width: 94%;
+  }
+  /* line 64, tmp/chance/Users/DANNO/Desktop/work/4D-Evolution/todos/tmp/debug/staging/static/todos/en/current/resources/stylesheets/todos_mobile_css.scss */
+  #todos h1 {
+    position: relative;
+    width: auto;
+  }
+  /* line 69, tmp/chance/Users/DANNO/Desktop/work/4D-Evolution/todos/tmp/debug/staging/static/todos/en/current/resources/stylesheets/todos_mobile_css.scss */
+  #todos input[type='checkbox'] {
+    width: 28px;
+    height: 28px;
+  }
+  /* line 74, tmp/chance/Users/DANNO/Desktop/work/4D-Evolution/todos/tmp/debug/staging/static/todos/en/current/resources/stylesheets/todos_mobile_css.scss */
+  #todos input.mark-all-done {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+  /* line 81, tmp/chance/Users/DANNO/Desktop/work/4D-Evolution/todos/tmp/debug/staging/static/todos/en/current/resources/stylesheets/todos_mobile_css.scss */
+  #todos ul li {
+    display: block;
+    height: 38px;
+    line-height: 18px;
+  }
+  /* line 88, tmp/chance/Users/DANNO/Desktop/work/4D-Evolution/todos/tmp/debug/staging/static/todos/en/current/resources/stylesheets/todos_mobile_css.scss */
+  #todos ul li .sc-checkbox input[type='checkbox'] {
+    margin-right: 12px;
+  }
+  /* line 94, tmp/chance/Users/DANNO/Desktop/work/4D-Evolution/todos/tmp/debug/staging/static/todos/en/current/resources/stylesheets/todos_mobile_css.scss */
+  #todos ul li.is-done {
+    text-decoration: none;
+  }
+}
+@media only screen and (device-width: 768px) {
+  /* line 117, tmp/chance/Users/DANNO/Desktop/work/4D-Evolution/todos/tmp/debug/staging/static/todos/en/current/resources/stylesheets/todos_mobile_css.scss */
+  #todos #stats {
+    font-size: 20px;
+    line-height: 38px;
+  }
+}
+
